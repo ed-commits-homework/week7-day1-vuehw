@@ -1,15 +1,38 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Project</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="./js/bundle.js"></script>
-  </head>
-  <body>
-    <h1>Project Page</h1>
-    <div id="app">
-      {{ greeting }}
-    </div>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Project</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Paytone+One">
+  <link rel="stylesheet" href="style.css">
+  <script src="./js/bundle.js"></script>
+</head>
+
+<body>
+  <h1>Todo List</h1>
+  <div id="app">
+    <form v-on:submit.prevent="new_todo">
+      <p>Add a new item:</p>
+      <label for="new-item">Priority:</label>
+
+      <input id="new-item" type="text" v-model="newItem" required/>
+      <input type="submit" value="Add Task!" />
+      <br/>
+
+      <label for="normal">Normal:</label>
+      <input type="radio" id="normal" name="priority" value="normal" v-model="priority">
+      <label for="high">High:</label>
+      <input type="radio" id="high" name="priority" value="high" v-model="priority">
+
+      </label>
+    </form>
+    <ul>
+      <li v-for="(item, index) in items">
+        <div :class="['item', item.priority]">{{ item.name }}</div>
+      </li>
+    </ul>
+  </div>
+</body>
+
 </html>

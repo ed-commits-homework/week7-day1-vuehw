@@ -1,3 +1,60 @@
 body {
-    background-color: rgb(224, 190, 251);
+    background-color: whitesmoke;
+    font-family: 'Paytone One';
+}
+
+h1 {
+    text-align: center;
+    font-size: 6em;
+}
+
+div.item {
+    border: 2px solid;
+    padding: 4px;
+    margin: 4px;
+}
+
+div.normal {
+    border-color: green;
+}
+
+div.high {
+    border-color: red;
+}
+
+input {
+    height: 40px;
+    font-size: 16px;
+}
+
+input[type=text] {
+    border: 1px solid #bbb;
+    border-radius: 8px;
+}
+
+input[type=text]:focus {
+    border: 1px solid #3498db;
+}
+
+input[type=submit] {
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+input[type=submit]:hover {
+    border: 2px solid blue;
+}
+
+input[type=submit]:active {
+    border: 2px solid blueviolet;
+}
+
+input[type="radio"] {
+    margin-top: -1px;
+    vertical-align: middle;
+}
+
+ul {
+    list-style-type: none;
+    display: inline;
 }
